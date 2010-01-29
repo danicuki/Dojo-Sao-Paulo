@@ -4,4 +4,8 @@ class WaterFlow
 
   end
 
+  def fluxo
+
+  end
+
 end
