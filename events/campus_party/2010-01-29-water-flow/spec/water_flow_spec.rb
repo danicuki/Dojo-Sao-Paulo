@@ -7,4 +7,9 @@ describe WaterFlow do
     water_flow.fluxo.should == [[5,0],[0,5]]
   end
 
+  it "deve ser [[10,0],[0,10]] para 2 caixas, 10 litros iniciais e cano com vazao de 10 l/s" do
+    water_flow = WaterFlow.new(2, 10, 10)
+    water_flow.fluxo.should == [[10,0],[0,10]]
+  end
+
 end
