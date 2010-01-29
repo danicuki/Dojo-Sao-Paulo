@@ -7,7 +7,7 @@ class WaterFlow
   end
 
   def fluxo
-    return [[@litros_iniciais,0],[0,@litros_iniciais]] if @litros_iniciais == @vazao_canos[0]
+    return [[@litros_iniciais,0],[0,@litros_iniciais]] if @litros_iniciais == @vazao_canos.first
     [[@litros_iniciais,0],[@litros_iniciais/@numero_caixas,@litros_iniciais/@numero_caixas],[0,@litros_iniciais]]
   end
 
