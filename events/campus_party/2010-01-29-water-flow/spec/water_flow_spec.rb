@@ -19,6 +19,12 @@
        water_flow.fluxo.should == [[10,0],[5,5],[0,10]]
      end
 
+     it "deve ser [[10,0],[0,10]] com 10 litros iniciais e cano com vazao de 11 L/s" do
+       water_flow = WaterFlow.new(2, 10, 11)
+       water_flow.fluxo.should == [[10,0],[0,10]]
+     end
+
+
    end
 
 
