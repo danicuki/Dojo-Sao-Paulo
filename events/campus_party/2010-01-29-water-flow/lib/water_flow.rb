@@ -5,7 +5,7 @@ class WaterFlow
   end
 
   def fluxo
-
+    [[5,0],[0,5]]
   end
 
 end
