@@ -1,11 +1,6 @@
 class NumericMaze
-  attr_reader :from, :to
-  def initialize from, to
-    @from = from
-    @to = to
-  end
-
-  def solve
-    [from]
+  def self.solve(from, to)
+    return [from] if from == to
+    [from, to]
   end
 end
