@@ -1,19 +1,28 @@
 class NumericMaze
   def self.solve(from, to)
 
-    result = [from]
-
-    while result.last != to do
-      result << result.last * 2
-      break if result.size > 100
-    end
+    return [to] if from == to
     
-    result = [from] if result.size > 100
-  
-    while result.last != to do
-      result << result.last + 2
-      break if result.size > 100
+    result_multiply = [from]
+    result_add = [from]
+
+    while result_add.size < 100 do
+      result_multiply = multiply(result_multiply)
+      return result_multiply if result_multiply.last == to
+      
+      result_add = add(result_add)
+      return result_add if result_add.last == to
     end
+  end
+  
+  def self.multiply(result)
+    result << result.last * 2
     result
   end
+  
+  def self.add(result)
+    result << result.last + 2
+    result
+  end
+  
 end
