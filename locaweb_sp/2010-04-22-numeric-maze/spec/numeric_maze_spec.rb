@@ -25,5 +25,13 @@ describe NumericMaze do
   it "should return [1,2] when going from 1 to 2" do
     solve_maze(1,2).should == [1,2]    
   end
+
+  it "should return [3,6] when going from 3 to 6" do
+    solve_maze(3,6).should == [3,6]    
+  end
+
+  it "should return [3,6,12] when going from 3 to 12" do
+    solve_maze(3,12).should == [3,6,12]    
+  end
   
 end
