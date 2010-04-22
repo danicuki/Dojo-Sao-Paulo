@@ -2,14 +2,20 @@ require "lib/numeric_maze"
 
 describe NumericMaze do
   
+  def solve_maze(from, to)
+    NumericMaze.solve(from, to)
+  end
+  
   it "should return [2] when going from 2 to 2" do
-    NumericMaze.solve(2,2).should == [2]
+    solve_maze(2,2).should == [2]
   end
   
   it "should return [1,3] when going from 1 to 3" do
-    NumericMaze.solve(1,3).should == [1,3]
+    solve_maze(1,3).should == [1,3]
   end
   
-  
+  it "should return [2,4,6] when going from 2 to 6" do
+    solve_maze(2,6).should == [2,4,6]
+  end
   
 end
