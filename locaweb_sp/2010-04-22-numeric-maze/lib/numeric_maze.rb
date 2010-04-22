@@ -5,24 +5,30 @@ class NumericMaze
     
     result_multiply = [from]
     result_add = [from]
+    result_halve = [from]
 
     while result_add.size < 100 do
-      result_multiply = multiply(result_multiply)
+      multiply(result_multiply)
       return result_multiply if result_multiply.last == to
       
-      result_add = add(result_add)
+      add(result_add)
       return result_add if result_add.last == to
+
+      halve(result_halve)
+      return result_halve if result_halve.last == to
     end
   end
   
   def self.multiply(result)
     result << result.last * 2
-    result
   end
   
   def self.add(result)
     result << result.last + 2
-    result
+  end
+
+  def self.halve(result)
+    result << result.last / 2
   end
   
 end

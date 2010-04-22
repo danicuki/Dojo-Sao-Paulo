@@ -33,5 +33,9 @@ describe NumericMaze do
   it "should return [3,6,12] when going from 3 to 12" do
     solve_maze(3,12).should == [3,6,12]    
   end
+
+  it "should return [2,1] when going from 2 to 1" do
+    solve_maze(2,1).should == [2,1]    
+  end
   
 end
