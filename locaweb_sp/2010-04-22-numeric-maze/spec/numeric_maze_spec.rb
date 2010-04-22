@@ -22,4 +22,8 @@ describe NumericMaze do
     solve_maze(1,7).should == [1,3,5,7]
   end
   
+  it "should return [1,2] when going from 1 to 2" do
+    solve_maze(1,2).should == [1,2]    
+  end
+  
 end
