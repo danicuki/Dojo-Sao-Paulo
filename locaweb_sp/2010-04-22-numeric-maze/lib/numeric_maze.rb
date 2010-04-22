@@ -1,7 +1,9 @@
 class NumericMaze
   def self.solve(from, to)
-    return [from] if from == to
-    return [from, from + 2, to] if to != from + 2
-    [from, to]
+    result = [from]
+    while result.last != to do
+      result << result.last + 2
+    end
+    result
   end
 end
