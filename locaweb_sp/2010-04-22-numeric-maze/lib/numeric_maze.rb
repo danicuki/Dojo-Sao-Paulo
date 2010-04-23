@@ -1,6 +1,5 @@
 class NumericMaze
   def self.solve(from, to)
-
     return [to] if from == to
     
     result_multiply = [from]
